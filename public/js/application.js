@@ -10,7 +10,7 @@
 					return ""+seconds+"s";
 				} else if(seconds < 3600) {
 					return ""+((seconds/60)|0)+"m"+((seconds%60)|0)+"s";
-				} else { 
+				} else {
 					// if(seconds < 86400) {
 					return ""+((seconds/3600)|0)+"h"+(((seconds%3600)/60)|0)+"m"+((seconds%60)|0)+"s";
 				}
@@ -64,7 +64,7 @@
 				this.clearPreference("defaultLanguage");
 			},
 			defaultExpiration: function() {
-				return this.getPreference("defaultExpiration", "-1");
+				return this.getPreference("defaultExpiration", "1d");
 			},
 			setDefaultExpiration: function(value) {
 				this.setPreference("defaultExpiration", value);

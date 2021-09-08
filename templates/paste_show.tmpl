@@ -20,19 +20,9 @@
 					<span class="button-title">Download</span>
 				</a>
 			</div>
-			{{if not .Obj.Encrypted}}
-			<button title="Report" type="button" data-target="#reportModal" data-toggle="modal" class="btn btn-inverse">
-				<i class="icon-flag icon-large"></i>
-				<span class="button-title">Report</span>
-			</button>
-			{{end}}
 		</div>
 		{{if editAllowed .}}
 		<div class="btn-group">
-			<button title="Grant" type="button" data-target="#grantModal" data-toggle="modal" class="btn btn-inverse">
-				<i class="icon-lemon icon-large"></i>
-			</button>
-
 			<a title="Edit" href="{{pasteURL "edit" .Obj}}" class="btn btn-primary">
 				<i class="icon-edit icon-large"></i>
 			</a>

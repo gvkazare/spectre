@@ -26,12 +26,11 @@
 	<span class="paste-title"><strong id="editable-paste-title" data-placeholder="{{with .Obj}}Paste {{.ID}}{{else}}New Paste{{end}}" contenteditable>{{with .Obj}}{{.Title}}{{end}}</strong></span>
 	<div class="paste-toolbox-buttons pull-right" id="desktop-paste-control-container">
 		<div id="paste-controls">
-			{{if not .Obj}}
-			<button id="optionsButton" title="Options" type="button" class="btn btn-inverse">
-				<i class="icon-wrench icon-large"></i>
-				<span class="button-title">Options</span>
-			</button>
-			{{end}}
+			<a title="All my pastes" href="/session" class="btn btn-inverse">
+				<i class="icon-file-text icon-large"></i>
+				<span class="button-title">All my pastes</span>
+			</a>
+
 			<button id="expirationButton" title="Expiration" type="button" class="btn btn-inverse">
 				<i class="icon-clock icon-large"></i>
 				<span class="button-title">Expiration</span>
@@ -70,7 +69,6 @@
 	<div class="modal-body">
 		<p>How long should this paste be allowed to roam the Earth?</p>
 		<div data-toggle="buttons-radio" class="btn-trough">
-			<button type="button" class="btn" data-value="-1" data-display-value="">Forever</button>
 			<button type="button" class="btn" data-value="10m" data-display-value="10m">Ten Minutes</button>
 			<button type="button" class="btn" data-value="1h" data-display-value="1h">an Hour</button>
 			<button type="button" class="btn" data-value="1d" data-display-value="1d">a Day</button>
